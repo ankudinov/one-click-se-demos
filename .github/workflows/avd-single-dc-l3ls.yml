@@ -9,7 +9,7 @@ on:
       - .github/workflows/container-build-child-workflow.yml
       - containers/avd-single-dc-l3ls/**
   workflow_dispatch:
-    branches: [main]
+    branches: [ '**' ]
 
 jobs:
   build-demo-container:
