@@ -13,7 +13,7 @@ ardl get eos --image-type cEOS --version ${CEOS_LAB_VERSION}  --import-docker
 mkdir ${CONTAINERWSF}/avd_inventory/
 cp -r /home/avd/.ansible/collections/ansible_collections/arista/avd/examples/single-dc-l3ls/* ${CONTAINERWSF}/avd_inventory/
 # change platform to cEOS
-grep -rl 'platform: vEOS-lab' . --exclude-dir .git | xargs sed -i 's@'platform: vEOS-lab'@'"platform: cEOS"'@g'
+grep -rl 'platform: vEOS-lab' . --exclude-dir .git | xargs sed -i 's@'"platform: vEOS-lab"'@'"platform: cEOS"'@g'
 
 # init demo dir as Git repo if requested for this demo env
 if ${GIT_INIT}; then
